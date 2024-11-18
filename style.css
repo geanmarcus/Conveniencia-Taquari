@@ -1,0 +1,148 @@
+* {
+    padding: 8px;
+    box-sizing: border-box;
+    color: var(--text-color);  
+}
+
+:root {
+    --text-color: white;
+    --bg-img: url(./bg-mobile.jpg);
+    --filter: 0;
+    --switch-bg-span: rgba(255, 255, 255, 0.3);
+    --span-bg:black;
+    --img-button: url(moon-stars.svg);
+    --filter-button: 0;
+    --filter-cart: invert(100);
+    --border-color: white
+}
+
+.light {
+    --text-color: black; 
+    --bg-img: url(bg-mobile-light.jpg);
+    --filter: invert(100%);
+    --switch-bg-span: rgba(0, 0, 0, 0.9);
+    --span-bg:white;
+    --img-button: url(sun.svg);
+    --filter-button: invert(100%); 
+    --filter-cart: 0;
+    --border-color: black;
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+
+body {
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;      
+}
+
+
+
+#profile img {   
+    width: 340px;
+    display: flex;  
+    margin: auto; 
+    padding-right: 40px;
+    filter: var(--filter)
+    
+}
+
+#switch {
+    
+    width: 52px;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    
+    
+}
+#switch button {   
+    border: 0;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: flex;
+    background: var(--img-button);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    filter: var(--filter-button);
+    left: 0;
+
+
+    
+
+}
+#switch span {
+    display: block;
+    width: 52px;
+    height: 18px;
+    background: var(--span-bg);
+    border-radius: 20px;
+    border: 1px solid var(--switch-bg-span);
+    
+    
+}
+ul {
+    list-style: none;   
+   text-align: center;   
+}
+ul li {
+    display: inline-block;   
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    align-items: center;
+    text-decoration: none;
+    padding: 30px;
+    border-radius: 50px;
+    font-size: 20px;  
+    width: 300px;
+    margin: 0;
+    font-size: 32px;   
+    border-width: 3px;
+}
+#texto {  
+    font-family: "Dancing Script", cursive;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+#texto p {  
+    margin: 0   
+}
+
+#texto2e3 {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#texto1 p {
+    font-size: 80px;
+}
+
+
+#supermarketcar img {
+    width: 50px;
+    filter: invert(100%);
+    padding: 1px;
+    filter: var(--filter-cart)
+}
